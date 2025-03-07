@@ -21,4 +21,5 @@ const fetchData = async (url, options = {}) => {
   }
 };
 
+
 export {fetchData};

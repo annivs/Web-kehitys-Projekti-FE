@@ -100,9 +100,7 @@ const loginUser = async (event) => {
     loginForm.reset(); // tyhjennetään formi
   };
 
-  const checkuser = async (event) => {
-    event.preventDefault();
-  
+  const checkuser = async (event) => {  
   
     // Endpoint
     const url = 'http://localhost:3000/api/auth/me';
@@ -139,23 +137,23 @@ const loginUser = async (event) => {
   document.addEventListener("DOMContentLoaded", () => {
     const token = localStorage.getItem("token");
     const authLinks = document.querySelectorAll(".auth-link");
+    const logoutButton = document.getElementById("logoutButton");
   
     if (token) {
-        // Käyttäjä on kirjautunut -> näytetään linkit
+        // Käyttäjä on kirjautunut -> näytetään sivut "Omat tietoni" ja "Päivän hyvinvointimittari"
         authLinks.forEach(link => link.style.display = "block");
+        logoutButton.style.display = "block"; // Näytetään "Kirjaudu ulos" -nappi
+    } else {
+      logoutButton.style.display = "none"; // Piilotetaan "Kirjaudu ulos" -nappi
     }
   });
-  
-  const logoutButton = document.getElementById("logoutButton");
-  
-  if (localStorage.getItem("token")) {
-      logoutButton.style.display = "block"; // Näytetään uloskirjautumisnappi, jos kirjautunut
-  }
   
   logoutButton.addEventListener("click", () => {
       localStorage.removeItem("token"); // Poistetaan token
       window.location.reload(); // Päivitetään sivu
   });
+
+
 
 const registerForm = document.querySelector('.registerForm');
 registerForm.addEventListener('submit', registerUser);

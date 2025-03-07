@@ -1,16 +1,27 @@
-import {fetchData} from './fetch';
+import { fetchData } from "./fetch.js";
 
 const getEntries = async () => {
-  console.log('Moikka, maailma');
-  console.log('Haetaan paikallisesta tiedostosta');
 
   // haetaan alue joho luodaan kortit
   const diaryContainer = document.getElementById('diary');
   console.log(diaryContainer);
 
-  // haetaan data joko json tai fetch rajapinnasta
-  const url = '/diary.json';
-  const response = await fetchData(url);
+  const token = localStorage.getItem('token');
+  
+  // Jos token ei ole saatavilla, ei voida tehdä pyyntöä
+  if (!token) {
+    console.log('Ei ole kirjautuneita käyttäjiä');
+    return;
+  }
+
+  const url = 'http://localhost:3000/api/entries';
+  const options = {
+    method: 'GET',
+    headers: {
+      'Authorization': `Bearer ${token}`,
+    },
+  };
+  const response = await fetchData(url, options);
 
   if (response.error) {
     console.log('Tapahtui virhe fetch haussa!!');
@@ -19,7 +30,8 @@ const getEntries = async () => {
 
   console.log(response);
 
-  // looppi jossa luodaan yksittäiset kortit
+// Luodaan yksittäisiä kortteja käyttäjän merkinnöille
+
   diaryContainer.innerHTML = '';
   response.forEach((entry) => {
     const card = document.createElement('div');
@@ -29,18 +41,17 @@ const getEntries = async () => {
     cardImg.classList.add('card-img');
 
     const img = document.createElement('img');
-    img.src = '/img/diary.jpg';
+    img.src = '/public/img/diary.jpg';
     img.alt = 'Diary Image';
     cardImg.appendChild(img);
 
     const cardDiary = document.createElement('div');
     cardDiary.classList.add('card-diary');
     cardDiary.innerHTML = `
-      <p><strong>Date:</strong> ${entry.entry_date}</p>
-      <p><strong>Mood:</strong> ${entry.mood}</p>
-      <p><strong>Weight:</strong> ${entry.weight} kg</p>
-      <p><strong>Sleep:</strong> ${entry.sleep_hours} hours</p>
-      <p><strong>Notes:</strong> ${entry.notes}</p>
+      <p><strong>Päivämäärä:</strong> ${entry.entry_date}</p>
+      <p><strong>Mieliala:</strong> ${entry.mood}</p>
+      <p><strong>Uni:</strong> ${entry.sleep_hours} tuntia</p>
+      <p><strong>Aktiivisuus:</strong> ${entry.notes}</p>
     `;
 
     card.appendChild(cardImg);
@@ -48,5 +59,5 @@ const getEntries = async () => {
     diaryContainer.appendChild(card);
   });
 };
-
+document.getElementById("fetch-all").addEventListener("click", getEntries);
 export {getEntries};

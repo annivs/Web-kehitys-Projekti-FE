@@ -13,36 +13,52 @@
         <div class="otsikko">MyHealth</div>
         <ul>
             <li><a href="Kirjaudu.html">Kirjautuminen</a></li>
+            <li><button id="logoutButton" style="display: none;">Kirjaudu ulos</button></li>
             <li><a href="Meistä.html">Meistä</a></li>
             <li><a href="OmatTiedot.html">Omat tietoni</a></li>
             <li><a href="Analyysi.html">Päivän hyvinvointimittari</a></li>
         </ul>
     </nav>
-    <div class="form-container">
-        <form class="diaryForm">
-            <h3>Päiväkirja</h3>
-    
-            <label for="entryDate">Päivämäärä:</label>
-            <input type="text" id="entryDate" placeholder="Kirjoita päivämäärä, esim. 2024-03-06">
-    
-            <label for="mood">Mielialani:</label>
-            <input type="text" id="moodNotes" placeholder="Kuvaile mielialaasi">
-    
-            <label for="sleepHours">Nukuin (tuntia):</label>
-            <input type="text" id="sleepNotes" placeholder="Kirjoita esim. '7'">
-    
-            <label for="notes">Aktiivisuus:</label>
-            <input type="text" id="activityNotes" placeholder="Kirjoita vapaasti päivän aktiivisuudesta.">
-    
-            <button id="saveButton">Tallenna</button>
-        </form>
+    <div class="main-container">
+        <div class="form-container">
+            <form class="diaryForm">
+                <h3>Päiväkirja</h3>
+        
+                <label for="entryDate">Päivämäärä:</label>
+                <input type="text" id="entryDate" placeholder="Kirjoita päivämäärä, esim. 2024-03-06">
+        
+                <label for="mood">Mielialani:</label>
+                <input type="text" id="moodNotes" placeholder="Kuvaile mielialaasi">
+        
+                <label for="sleepHours">Nukuin (tuntia):</label>
+                <input type="text" id="sleepNotes" placeholder="Kirjoita esim. '7'">
+        
+                <label for="notes">Aktiivisuus:</label>
+                <input type="text" id="activityNotes" placeholder="Kirjoita vapaasti päivän aktiivisuudesta.">
+        
+                <button id="saveButton">Tallenna</button>
+            </form>
+        </div>
+    <section id="diary">
+    <div class="card">
+        <h3>Hae omat päiväkirjamerkinnät</h3>
+        <button id="fetch-all">Hae</button>
+        <div class="card-img">
+            <img src="/public/img/diary.jpg" alt="Diary" />
+        </div>
+        <div class="card-diary">
+            <div>Päivämäärä: <span class="diary-date"></span></div>
+            <div>Mieliala: <span class="diary-mood"></span></div>
+            <div>Uni: <span class="diary-sleep"></span></div>
+            <div>Aktiivisuus: <p class="diary-notes"></p></div>
+            <div class="card-buttons">
+            </div>
+        </div>
     </div>
-    
-    
-        <h3>Flexboxilla tehty kortti + Fetch + Itse luodut elementit</h3>
-
-        <button class="get_entries">Hae päiväkirjamerkinnät</button>
-        <div id="diary" class="card-area"></div>
+</div>
+</section>
         <script type ="module" src="/src/js/diary.js"></script>
+        <script type ="module" src="/src/js/entries.js"></script>
+        <script type="module" src="/src/js/auth.js"></script>
 </body>
 </html>
