@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Omat tietoni</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,400&display=swap"/>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="otsikko">MyHealth</div>
+        <ul>
+            <li><a href="Kirjaudu.html">Kirjautuminen</a></li>
+            <li><a href="Meistä.html">Meistä</a></li>
+            <li><a href="OmatTiedot.html">Omat tietoni</a></li>
+            <li><a href="Analyysi.html">Päivän hyvinvointimittari</a></li>
+        </ul>
+    </nav>
+    <div class="form-container">
+        <form class="diaryForm">
+            <h3>Päiväkirja</h3>
+    
+            <label for="entryDate">Päivämäärä:</label>
+            <input type="text" id="entryDate" placeholder="Kirjoita päivämäärä, esim. 2024-03-06">
+    
+            <label for="mood">Mielialani:</label>
+            <input type="text" id="moodNotes" placeholder="Kuvaile mielialaasi">
+    
+            <label for="sleepHours">Nukuin (tuntia):</label>
+            <input type="text" id="sleepNotes" placeholder="Kirjoita esim. '7'">
+    
+            <label for="notes">Aktiivisuus:</label>
+            <input type="text" id="activityNotes" placeholder="Kirjoita vapaasti päivän aktiivisuudesta.">
+    
+            <button id="saveButton">Tallenna</button>
+        </form>
+    </div>
+    
+    
+        <h3>Flexboxilla tehty kortti + Fetch + Itse luodut elementit</h3>
+
+        <button class="get_entries">Hae päiväkirjamerkinnät</button>
+        <div id="diary" class="card-area"></div>
+        <script type ="module" src="/src/js/diary.js"></script>
+</body>
+</html>

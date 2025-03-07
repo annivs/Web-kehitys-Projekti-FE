@@ -1,0 +1,119 @@
+/* HERO-OSIO */
+.hero-image {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/img/hero_image.jpg'); 
+  background-size: cover;
+  background-position: center;
+  width: 90%;
+  height: 300px;
+  margin: auto;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white; 
+  border-radius: 8px;
+}
+
+.hero-text {
+  position: absolute;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.slogan {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* ETUSIVUN SISÄLTÖALUE */
+.yht {
+  max-width: 1500px;
+  width: 90%;
+  height: auto; 
+  margin: 30px auto; 
+  border-radius: 8px;
+  background: 
+  linear-gradient(rgba(41, 40, 40, 0.3), rgba(59, 57, 57, 0.3)), 
+  linear-gradient(rgb(74, 141, 74), rgb(113, 187, 113), lightblue); color: #fff;
+  background-size: cover;
+  position: relative;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+}
+
+
+/* LOGO-KUVA */
+.logokuva {
+  width: 10%;
+  max-width: 100px;
+  min-width: 50px;
+  position: absolute;
+  right: 2%;
+  top: -5%;
+}
+
+/* RESPONSIIVISUUS */
+@media (max-width: 1024px) {
+  .hero-image {
+      height: 250px;
+  }
+
+  .yht {
+      padding: 15px;
+  }
+
+  .hyvinvointik {
+      width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+      height: 200px;
+  }
+
+  .slogan {
+      font-size: 18px;
+  }
+
+  .yht {
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .hyvinvointik {
+      width: 60%;
+      margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image {
+      height: 180px;
+  }
+
+  .slogan {
+      font-size: 16px;
+  }
+
+  .yht {
+      font-size: 12px;
+      padding: 8px;
+  }
+
+  .hyvinvointik {
+      width: 80%;
+  }
+
+  .logokuva {
+      width: 15%;
+  }
+}

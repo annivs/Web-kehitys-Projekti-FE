@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="/src/css/analysis.css" />
+    <title>Päivän hyvinvointimittari</title>
+  </head>
+  <body>
+    <nav>
+      <div class="otsikko">MyHealth</div>
+      <ul>
+        <li><a href="Kirjaudu.html">Kirjautuminen</a></li>
+        <li><a href="Meistä.html">Meistä</a></li>
+        <li><a href="OmatTiedot.html">Omat tietoni</a></li>
+        <li><a href="Analyysi.html">Päivän hyvinvointimittari</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h1>Päivän hyvinvointimittari</h1>
+      <img class="Brains" src="/public/img/brain.jpeg" alt="Brains">
+      <p>Valitse mittari ja syötä arvo saadaksesi palautteen hyvinvoinnistasi.</p>
+
+      <label for="metric">Valitse mittari:</label>
+      <select id="metric">
+        <option value="sleep">Uni (tuntia)</option>
+        <option value="activity">Aktiivisuus (min)</option>
+        <option value="mood"> Mieliala (1-10)</option>
+      </select>
+
+      <input type="number" id="metricValue" placeholder="Syötä arvo">
+      <button onclick="analyzeWellbeing()">Analysoi</button>
+
+      <div id="wellbeingResult" class="result"></div>
+    </div>
+
+    <script src="/src/js/analysis.js"></script>
+  </body>
+
+</html>

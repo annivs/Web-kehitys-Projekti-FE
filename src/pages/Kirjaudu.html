@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kirjautuminen</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,400&display=swap"/>
+    <link rel="stylesheet" href="/src/css/style.css">
+    
+<body>
+  <nav>
+    <div class="otsikko">MyHealth</div>
+    <ul>
+        <li><a href="Kirjaudu.html">Kirjautuminen</a></li>
+        <li><a href="Meistä.html">Meistä</a></li>
+        <li class="auth-link"><a href="OmatTiedot.html">Omat tietoni</a></li>
+        <li class="auth-link"><a href="Analyysi.html">Päivän hyvinvointimittari</a></li>
+    </ul>
+</nav>
+    <div class="form-container">
+        <form class="registerForm">
+          <h3>REKISTERÖIDY</h3>
+          <label>Käyttäjänimi</label>
+          <input id="username" type="text" placeholder="Käyttäjänimi">
+          <label>Salasana</label>
+          <input id="password" type="password" placeholder="Salasana">
+          <label>Sähköposti</label>
+          <input id="email" type="email" placeholder="käyttäjänimi@example.com">
+          <button type="submit">Rekisteröidy</button>
+        </form>
+      
+        <form class="loginForm">
+          <h3>KIRJAUDU</h3>
+          <label>Käyttäjänimi</label>
+          <input id="username" type="text" placeholder="Käyttäjänimi">
+          <label>Salasana</label>
+          <input id="password" type="password" placeholder="Salasana">
+          <button type="submit">Kirjaudu sisään ja saa token</button>
+        </form>
+      </div>      
+      <br />
+      <div id="loginResponse"></div>
+    <div>
+      <button id="logoutButton" style="display: none;">Kirjaudu ulos</button>
+    </div>
+  </body>
+  <script type="module" src="/src/js/auth.js"></script>
+</html>
