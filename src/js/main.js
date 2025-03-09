@@ -1,4 +1,4 @@
-import { fetchUsers, createNewUser, deleteUser, getUserById, fetchEntries, deleteEntry, getEntryById, updateEntry } from "./fetch.js";
+import { fetchUsers, createNewUser, getUserById, fetchEntries, deleteEntry, getEntryById } from "./fetch.js";
 
 const userTableBody = document.getElementById("users-table-body");
 const fetchButton = document.getElementById("fetch-users");

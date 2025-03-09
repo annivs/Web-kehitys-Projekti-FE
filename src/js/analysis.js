@@ -42,3 +42,5 @@ function analyzeWellbeing() {
 
   resultDiv.innerHTML = feedback;
 }
+
+window.analyzeWellbeing = analyzeWellbeing;

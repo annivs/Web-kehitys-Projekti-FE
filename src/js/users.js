@@ -1,16 +1,5 @@
 import { fetchData } from "./fetch.js";
 
-// --- Snackbar ---
-const snackbar = document.getElementById('snackbar');
-const showSnackbar = (message, type = '') => {
-  snackbar.innerText = message;
-  snackbar.className = `show ${type}`.trim();
-
-  setTimeout(() => {
-    snackbar.className = snackbar.className.replace('show', '').trim();
-  }, 3000);
-};
-
 // --- Dialogi ---
 const dialog = document.querySelector('.info_dialog');
 const closeButton = dialog.querySelector('button');
@@ -111,7 +100,6 @@ const addUser = async (event) => {
   getUsers();
 };
 
-// --- Tapahtumankuuntelijat ---
 const addEventListeners = () => {
   const checkButtons = document.querySelectorAll('.check');
   checkButtons.forEach((button) => {
@@ -129,36 +117,8 @@ const addEventListeners = () => {
       }
     });
   });
-
-  const deleteButtons = document.querySelectorAll('.del');
-  deleteButtons.forEach((button) => {
-    button.addEventListener('click', async (event) => {
-      const userId = event.target.dataset.id;
-      await deleteUser(userId);
-      getUsers();
-    });
-  });
 };
 
-// --- deleteUser ---
-const deleteUser = async (userId) => {
-  const url = `http://localhost:3000/api/users/${userId}`;
-  const options = {
-    method: 'DELETE',
-  };
-
-  const response = await fetchData(url, options);
-  
-  if (response.error) {
-    console.log('Virhe käyttäjän poistamisessa:', response.error);
-    showSnackbar('Virhe käyttäjän poistamisessa', 'error');
-    return;
-  }
-
-  showSnackbar('Käyttäjä poistettu onnistuneesti.');
-};
-
-// --- Alustavat tapahtumat ---
 document.getElementById("fetch-users").addEventListener("click", getUsers);
 document.getElementById("create-user").addEventListener("click", addUser);
 

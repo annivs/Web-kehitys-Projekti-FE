@@ -1,24 +1,26 @@
 <!DOCTYPE html>
+<html lang ="fi">
 <html>
   <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Kirjautuminen</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,400&display=swap"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,400&display=swap"/>
     <link rel="stylesheet" href="/src/css/style.css">
     
 <body>
   <nav>
     <div class="otsikko">MyHealth</div>
     <ul>
+      <li><a href="/index.html">Etusivu</a></li>
         <li><a href="Kirjaudu.html">Kirjautuminen</a></li>
         <li><button id="logoutButton" style="display: none;">Kirjaudu ulos</button></li>
-        <li><a href="Meistä.html">Meistä</a></li>
         <li class="auth-link"><a href="OmatTiedot.html">Omat tietoni</a></li>
         <li class="auth-link"><a href="Analyysi.html">Päivän hyvinvointimittari</a></li>
     </ul>
 </nav>
+<main>
     <div class="form-container">
         <form class="registerForm">
           <h3>REKISTERÖIDY</h3>
@@ -45,5 +47,7 @@
     <div>
     </div>
   </body>
+</main>
+<footer>Minun sivusto</footer>
   <script type="module" src="/src/js/auth.js"></script>
 </html>

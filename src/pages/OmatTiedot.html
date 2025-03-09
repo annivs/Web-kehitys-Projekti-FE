@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Omat tietoni</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +13,14 @@
     <nav>
         <div class="otsikko">MyHealth</div>
         <ul>
+            <li><a href="/index.html">Etusivu</a></li>
             <li><a href="Kirjaudu.html">Kirjautuminen</a></li>
             <li><button id="logoutButton" style="display: none;">Kirjaudu ulos</button></li>
-            <li><a href="Meistä.html">Meistä</a></li>
             <li><a href="OmatTiedot.html">Omat tietoni</a></li>
             <li><a href="Analyysi.html">Päivän hyvinvointimittari</a></li>
         </ul>
     </nav>
+    <main>
     <div class="main-container">
         <div class="form-container">
             <form class="diaryForm">
@@ -52,13 +54,16 @@
             <div>Uni: <span class="diary-sleep"></span></div>
             <div>Aktiivisuus: <p class="diary-notes"></p></div>
             <div class="card-buttons">
+                <button id="delete-btn" style="display: none;" >Poista merkintä</button>
             </div>
         </div>
     </div>
 </div>
 </section>
+</main>
+<footer>Minun sivusto</footer>
         <script type ="module" src="/src/js/diary.js"></script>
         <script type ="module" src="/src/js/entries.js"></script>
         <script type="module" src="/src/js/auth.js"></script>
-</body>
+    </body>
 </html>

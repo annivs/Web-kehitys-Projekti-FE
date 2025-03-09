@@ -1,5 +1,6 @@
 import {fetchData} from './fetch.js';
 
+
     const postDiary = async (event) => {
         event.preventDefault();
 

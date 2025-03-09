@@ -1,4 +1,3 @@
-/* HERO-OSIO */
 .hero-image {
   position: relative;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/img/hero_image.jpg'); 
@@ -29,7 +28,6 @@
   text-align: center;
 }
 
-/* ETUSIVUN SISÄLTÖALUE */
 .yht {
   max-width: 1500px;
   width: 90%;

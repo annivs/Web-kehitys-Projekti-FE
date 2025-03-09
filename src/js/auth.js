@@ -35,14 +35,21 @@ const registerUser = async (event) => {
   // Hae data
   const response = await fetchData(url, options);
 
+  const loginResponse = document.getElementById('loginResponse'); // Palaute
+
   if (response.error) {
-    console.error('Error adding a new user:', response.error);
+    loginResponse.textContent = 'Rekisteröinti epäonnistui: ' + response.error;
+    loginResponse.className = 'error'; // Virheviesti
+    loginResponse.classList.add('show');
     return;
   }
 
   if (response.message) {
-    console.log(response.message, 'success');
+    loginResponse.textContent = 'Rekisteröityminen onnistui!';
+    loginResponse.className = 'success'; // Onnistumisviesti
+    loginResponse.classList.add('show');
   }
+
 
   console.log(response);
   registerForm.reset(); // tyhjennetään formi
@@ -81,23 +88,33 @@ const loginUser = async (event) => {
     const response = await fetchData(url, options);
   
     if (response.error) {
-      console.error('Error loginning in:', response.error);
+      loginResponse.textContent = 'Kirjautuminen epäonnistui: ' + response.error;
+      loginResponse.className = 'error'; // Virheviesti
+      loginResponse.classList.add('show');
+      loginForm.reset(); // Tyhjennetään lomake 
+
+      setTimeout(function() {
+        loginResponse.classList.remove('show');
+        loginResponse.textContent = ''; 
+      }, 3000); // Ilmoitus kestää 3 sekuntia
       return;
     }
-  
+    
     if (response.token) {
-      console.log('Kirjautuminen onnistui! Token:', response.token);
+      loginResponse.textContent = 'Kirjautuminen onnistui!';
+      loginResponse.className = 'success'; // Onnistumisviesti
+      loginResponse.classList.add('show');
       localStorage.setItem('token', response.token); // Tallennetaan token localStorageen
-    } else {
-      console.error('Virhe: Tokenia ei palautettu.');
+      console.log('Kirjautuminen onnistui! Token:', response.token); // Tulostetaan token konsoliin
+      loginForm.reset(); // Tyhjennetään lomake
+
+
+      setTimeout(function() {
+        loginResponse.classList.remove('show');
+        loginResponse.textContent = '';
+      }, 3000); // Ilmoitus kestää 3 sekuntia
     }
-  
-    if (response.message) {
-      console.log(response.message, 'success');
-    }
-  
-    console.log(response);
-    loginForm.reset(); // tyhjennetään formi
+
   };
 
   const checkuser = async (event) => {  

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang ="fi">
 <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>MyHealth</title>
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,400&display=swap"/>
@@ -12,11 +13,11 @@
     <nav>
         <div class="otsikko">MyHealth</div>
         <ul>
-            <li><a href="Kirjaudu.html">Kirjautuminen</a></li>
+            <li><a href="/index.html">Etusivu</a></li>
+            <li><a href="src/pages/Kirjaudu.html">Kirjautuminen</a></li>
             <li><button id="logoutButton" style="display: none;">Kirjaudu ulos</button></li>
-            <li><a href="Meistä.html">Meistä</a></li>
-            <li class="auth-link"><a href="OmatTiedot.html">Omat tietoni</a></li>
-            <li class="auth-link"><a href="Analyysi.html">Päivän hyvinvointimittari</a></li>
+            <li class="auth-link"><a href="src/pages/OmatTiedot.html">Omat tietoni</a></li>
+            <li class="auth-link"><a href="src/pages/Analyysi.html">Päivän hyvinvointimittari</a></li>
         </ul>
     </nav>
     <main>
@@ -32,14 +33,15 @@
         <img class="logokuva" src="/public/img/Heart_logo.png" alt="Logokuva">
         <h3>Ketä me olemme?</h3>
         <p>
-            MyHealth terveyspäiväkirja on helppokäyttöinen sovellus, jonka avulla voit seurata päivittäistä hyvinvointiasi. Kirjaa ylös unen määrä ja laatu, olotilasi, energiatasosi sekä muita hyvinvointiisi vaikuttavia tekijöitä.
+            MyHealth terveyspäiväkirja on helppokäyttöinen sovellus, jonka avulla voit seurata päivittäistä hyvinvointiasi. Kirjaa ylös unen määrä, mielialasi ja aktiivisuutesi. 
             Sovellus auttaa sinua hahmottamaan pidemmän aikavälin muutoksia ja tunnistamaan mahdollisia yhteyksiä esimerkiksi unen ja jaksamisen välillä.
-            Visuaaliset yhteenvedot ja selkeät merkinnät tekevät oman terveyden seuraamisesta vaivatonta ja motivoivaa.
+            Helposti nähtävät tulokset ja selkeät merkinnät tekevät oman terveyden seuraamisesta vaivatonta ja motivoivaa.
 
             Aloita oman hyvinvointisi seuranta jo tänään!
         </p>
     </div>
     </main>
+    <footer>Minun sivusto</footer>
     <script type="module" src="/src/js/auth.js"></script>
 </body>
 </html>
