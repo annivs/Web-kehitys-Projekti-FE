@@ -244,6 +244,20 @@ textarea {
     background-color: #dddddd;
   }
 
+#analyzebtn {
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    width: 50%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+    
+    #analyzebtn:hover {
+    background-color: #dddddd;
+}
 
 /* FOOTER */
 footer {
