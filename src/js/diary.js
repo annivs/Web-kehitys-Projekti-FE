@@ -1,4 +1,5 @@
 import {fetchData} from './fetch.js';
+import { getEntries } from './entries.js';
 
 
     const postDiary = async (event) => {
@@ -48,10 +49,9 @@ import {fetchData} from './fetch.js';
 
             console.log(response);
             diaryForm.reset();
+            getEntries();
 
         }
 
 const diaryBtn = document.querySelector('#saveButton');
 diaryBtn.addEventListener('click', postDiary);
-
-

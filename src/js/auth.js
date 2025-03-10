@@ -106,6 +106,7 @@ const loginUser = async (event) => {
       loginResponse.classList.add('show');
       localStorage.setItem('token', response.token); // Tallennetaan token localStorageen
       console.log('Kirjautuminen onnistui! Token:', response.token); // Tulostetaan token konsoliin
+      await checkuser(); // Tuodaan piilotetut sivut esiin
       loginForm.reset(); // Tyhjennetään lomake
 
 
@@ -118,58 +119,69 @@ const loginUser = async (event) => {
   };
 
   const checkuser = async (event) => {  
-  
-    // Endpoint
     const url = 'http://localhost:3000/api/auth/me';
-    
-    let headers = {};
-
     const token = localStorage.getItem('token');
 
-    headers = {
-        Authorization: `Bearer ${token}`
-    };
-    // Options
+    if (!token) {
+        console.error("Ei tokenia tallennettuna.");
+        return;
+    }
+
     const options = {
-      headers: headers,
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
     };
-    console.log(options);
-  
-    // Hae data
+
+    console.log("Lähetetään pyyntö:", options);
+
     const response = await fetchData(url, options);
-  
+
     if (response.error) {
-      console.error('Error cheking new user:', response.error);
-      return;
+        console.error('Virhe käyttäjän tarkistuksessa:', response.error);
+        return;
     }
-  
-    if (response.message) {
-        console.log(response.message, 'success');
-        localStorage.setItem('token', response.token);
+
+    if (response.token) {
+        localStorage.setItem('token', response.token); // Päivitä token vain jos se tulee vastauksessa
     }
-  
-    console.log(response);
-    loginForm.reset(); // tyhjennetään formi
-  };
-  document.addEventListener("DOMContentLoaded", () => {
+
+    console.log("Käyttäjän tiedot:", response);
+
+    loginForm.reset(); // Tyhjennä lomake
+    window.location.href = "/index.html";
+    // Päivitetään navigaatio heti onnistuneen kirjautumisen jälkeen
+    paivitaNavigaatio();
+};
+
+// Päivitä navigaatio
+function paivitaNavigaatio() {
     const token = localStorage.getItem("token");
     const authLinks = document.querySelectorAll(".auth-link");
     const logoutButton = document.getElementById("logoutButton");
-  
-    if (token) {
-        // Käyttäjä on kirjautunut -> näytetään sivut "Omat tietoni" ja "Päivän hyvinvointimittari"
-        authLinks.forEach(link => link.style.display = "block");
-        logoutButton.style.display = "block"; // Näytetään "Kirjaudu ulos" -nappi
-    } else {
-      logoutButton.style.display = "none"; // Piilotetaan "Kirjaudu ulos" -nappi
-    }
-  });
-  
-  logoutButton.addEventListener("click", () => {
-      localStorage.removeItem("token"); // Poistetaan token
-      window.location.reload(); // Päivitetään sivu
-  });
+    const login = document.getElementById("login");
 
+    if (token) {
+        authLinks.forEach(link => link.style.display = "block");
+        logoutButton.style.display = "block"; // Näytä "Kirjaudu ulos" -nappi
+        login.style.display = "none"
+    } else {
+        authLinks.forEach(link => link.style.display = "none");
+        logoutButton.style.display = "none"; // Piilota "Kirjaudu ulos" -nappi
+        login.style.display = "block"; // Näytä "Kirjaudu ulos" -nappi
+
+    }
+}
+
+
+// Suorita navigaation päivitys, kun sivu latautuu
+document.addEventListener("DOMContentLoaded", paivitaNavigaatio);
+
+logoutButton.addEventListener("click", () => {
+  localStorage.removeItem("token"); // Poistetaan token
+  paivitaNavigaatio(); // Päivitetään navigaatio ilman sivun lataamista
+  window.location.href = "/index.html";
+});
 
 
 const registerForm = document.querySelector('.registerForm');

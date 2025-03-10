@@ -15,9 +15,10 @@
       <div class="otsikko">MyHealth</div>
       <ul>
         <li><a href="/index.html">Etusivu</a></li>
-        <li><a href="Kirjaudu.html">Kirjautuminen</a></li>
-        <li><a href="OmatTiedot.html">Omat tietoni</a></li>
-        <li><a href="Analyysi.html">Päivän hyvinvointimittari</a></li>
+        <li><a id="login" href="Kirjaudu.html">Kirjautuminen</a></li>
+        <li class="auth-link"><a href="OmatTiedot.html">Omat tietoni</a></li>
+          <li class="auth-link"><a href="Analyysi.html">Päivän hyvinvointimittari</a></li>
+          <li><button id="logoutButton" style="display: none;">Kirjaudu ulos</button></li>
       </ul>
     </nav>
     <main>
@@ -41,5 +42,6 @@
   </main>
   <footer>Minun sivusto</footer>
     <script type="module" src="/src/js/analysis.js"></script>
+    <script type="module" src="/src/js/auth.js"></script>
   </body>
 </html>

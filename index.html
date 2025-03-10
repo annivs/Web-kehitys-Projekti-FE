@@ -5,8 +5,9 @@
     <title>MyHealth</title>
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,400&display=swap"/>
-    <link rel="stylesheet" href="/src/css/style.css">
     <link rel="stylesheet" href="/src/css/meistä.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+
 
 </head>
 <body>
@@ -14,13 +15,14 @@
         <div class="otsikko">MyHealth</div>
         <ul>
             <li><a href="/index.html">Etusivu</a></li>
-            <li><a href="src/pages/Kirjaudu.html">Kirjautuminen</a></li>
-            <li><button id="logoutButton" style="display: none;">Kirjaudu ulos</button></li>
+            <li><a id="login" href="src/pages/Kirjaudu.html">Kirjautuminen</a></li>
             <li class="auth-link"><a href="src/pages/OmatTiedot.html">Omat tietoni</a></li>
             <li class="auth-link"><a href="src/pages/Analyysi.html">Päivän hyvinvointimittari</a></li>
+            <li><button id="logoutButton" style="display: none;">Kirjaudu ulos</button></li>
         </ul>
     </nav>
     <main>
+        <body class="homepage"></body>
         <div class="hero-image">
             <div class="hero-text">
                 <h1>Helppoa terveyden seurantaa kaikille</h1>
