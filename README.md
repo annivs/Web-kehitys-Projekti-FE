@@ -9,11 +9,12 @@ Käyttäjäautentikointi on toteutettu JWT-Tokenin avulla.
 ---
 
 ## Projektin rakenne
+```
 
 ProjektiFE/
 │── index.html   # Pääsivu
 │── public/
-│   │── img/ * Kuvakansio
+│   ├── img/       # Kuvakansio
 │   │   ├── brain.jpeg
 │   │   ├── diary.jpg
 │   │   ├── Heart_logo.png
@@ -23,38 +24,38 @@ ProjektiFE/
 │   │   ├── OmatTiedot.png
 │   │   ├── Päivänhyvinvointimittari.png
 │── src/
-│   │── css/ * Tyylittely
-│   │   ├── analysis.css 
-│   │   ├── meistä.css 
-│   │   ├── modal.css 
-│   │   ├── style.css 
-│   │── js/ * JavaScript tiedostot
-│   │   ├── analysis.js 
-│   │   ├── auth.js 
+│   ├── css/       # Tyylitiedostot
+│   │   ├── analysis.css
+│   │   ├── meistä.css
+│   │   ├── modal.css
+│   │   ├── style.css
+│   ├── js/        # JavaScript-tiedostot
+│   │   ├── analysis.js
+│   │   ├── auth.js
 │   │   ├── diary.js
 │   │   ├── entries.js
 │   │   ├── fetch.js
 │   │   ├── main.js
 │   │   ├── users.js
-│   │── pages/ * HTML sivut
+│   ├── pages/     # HTML-sivut
 │   │   ├── Analyysi.html
 │   │   ├── Kirjaudu.html
 │   │   ├── OmatTiedot.html
-│   ├── favicon.ico  # Sovelluksen icon
-│   ├── package-lock.json 
-│   ├── package.json
-│   ├── README.md
-
+│── favicon.ico  # Sovelluksen ikoni
+│── package-lock.json
+│── package.json
+│── README.md
+```
 ---
-
 
 ## Muuta  
 Frontend on rakennettu seuraavilla teknologioilla:  
 - **JavaScript**  
 - **HTML**  
 - **CSS**  
-- **Node.js & Express.js** (taustajärjestelmä)  
+- **Node.js & Express.js** (taustajärjestelmä)
 - **MySQL** (tietokanta)  
-- **JWT (JSON Web Token)** käyttäjäautentikointiin  
+- **JWT (JSON Web Token)** käyttäjäautentikointiin
+-  Kuvat käyttöliittymästä löytyy /public/img- kansiosta.
 
 ---
