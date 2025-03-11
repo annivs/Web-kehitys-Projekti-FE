@@ -47,6 +47,22 @@ ProjektiFE/
 │── README.md
 ```
 ---
+## Kuvia käyttöliittymästä
+
+![Etusivu](public/img/Index.png)
+**Etusivu**
+
+![Kirjautuminen](public/img/Kirjautuminen.png)
+**Kirjautuminen**
+
+![OmatTiedot](public/img/OmatTiedot.png)
+**Omien merkintöjen tarkastelu ja lisääminen**
+
+![Päivänhyvinvointimittari](public/img/Päivänhyvinvointimittari.png)
+**Päivän hyvinvointimittari**
+
+
+
 
 ## Muuta  
 Frontend on rakennettu seuraavilla teknologioilla:  
@@ -56,6 +72,5 @@ Frontend on rakennettu seuraavilla teknologioilla:
 - **Node.js & Express.js** (taustajärjestelmä)
 - **MySQL** (tietokanta)  
 - **JWT (JSON Web Token)** käyttäjäautentikointiin
--  Kuvat käyttöliittymästä löytyy /public/img- kansiosta.
 
 ---
