@@ -74,8 +74,8 @@ Frontend on rakennettu seuraavilla teknologioilla:
 - **JWT (JSON Web Token)** käyttäjäautentikointiin
 
 ---
+# Ohjelmistotestaus - yksilötehtävät
 
-  
 
 ## Tehtävä 1.
 
