@@ -1,4 +1,6 @@
-# 📖 MyHealth frontend
+# MyHealth frontend
+
+[Siirry kohtaan "Ohjelmistotestaus - yksilötehtävät"](#ohjelmistotestaus---yksilötehtävät)
 
 ## Yleiskuvaus sovelluksesta
 
