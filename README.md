@@ -77,7 +77,6 @@ Frontend on rakennettu seuraavilla teknologioilla:
 
 ---
 # Ohjelmistotestaus - yksilötehtävät  
-e8f1d72 (Lisätty linkki tehtäviin READMEssä)
 
 ## Tehtävä 1.
 
