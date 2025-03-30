@@ -135,3 +135,40 @@ Browser: 19.4.0
 requests: 2.32.3
 CryptoLibrary: 0.4.2
 ````
+
+
+## Tehtävä 2.
+
+Tässä tehtävässä sovellettiin tunnilla annettua kirjautumisesimerkkiä ja sovellettiin sitä oman sovelluksen kirjautumiseen.
+Ensin lisäsin kaksi tiedostoa Tests/ kansioon: 
+
+1. browser_demo.robot- tiedostoon laitoin seuraavat tiedot:
+
+````
+*** Settings ***
+Library     Browser    auto_closing_level=KEEP
+Resource    Keywords.robot  
+
+*** Test Cases ***
+Test MyHealth
+    New Browser    chromium    headless=No  
+    New Page       http://localhost:5173/src/pages/Kirjaudu.html 
+    Get Title      ==    Kirjautuminen
+    Type Text    css=.loginForm input[type="text"]    ${Username}    delay=0.1 s
+    Type Secret  css=.loginForm input[type="password"]    $Password   delay=0.1 s
+    Click    css=.loginForm button
+````
+ 2. Keywords.robot- tiedostoon lisäsin testikäyttäjätunnukset:
+
+ ````
+*** Variables ***
+${Username}     ansku
+${Password}     anskubansku
+````
+Tämän jälkeen ajoin browser_demo.robot- tiedoston terminalissa komennolla: 
+````
+robot tests/browser_demo.robot
+````
+Onnistunut lopputulos terminalissa:
+![Kirjautumisdemo](public/img/Browser_demo.png)
+**Onnistunut kirjautuminen**
