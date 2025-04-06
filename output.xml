@@ -1,96 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.1 on darwin)" generated="2025-04-06T17:37:14.841023" rpa="false" schemaversion="5">
-<suite id="s1" name="Teht5" source="/Users/annisaarelma/Opiskelu/Metropolia/Webkehitys/ProjektiFE/tests/teht5.robot">
-<test id="s1-t1" name="Login to MyHealth using env" line="10">
+<robot generator="Robot 7.2.2 (Python 3.13.1 on darwin)" generated="2025-04-06T19:35:07.695489" rpa="false" schemaversion="5">
+<suite id="s1" name="Teht6" source="/Users/annisaarelma/Opiskelu/Metropolia/Webkehitys/ProjektiFE/tests/teht6.robot">
+<test id="s1-t1" name="Login to MyHealth with CryptoLibrary" line="10">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-04-06T17:37:14.950977" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/Users/annisaarelma/Opiskelu/Metropolia/Webkehitys/ProjektiFE/browser/traces/temp/904fdbaf-fc36-45c7-88bf-d1f26c0c3004"}</msg>
-<msg time="2025-04-06T17:37:15.009995" level="INFO">Starting Browser process /Users/annisaarelma/Opiskelu/Metropolia/Webkehitys/ProjektiFE/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js using port 57827</msg>
-<msg time="2025-04-06T17:37:15.010160" level="INFO">Node startup parameters: ['node', '/Users/annisaarelma/Opiskelu/Metropolia/Webkehitys/ProjektiFE/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js', '57827']</msg>
-<msg time="2025-04-06T17:37:17.347441" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/Users/annisaarelma/Opiskelu/Metropolia/Webkehitys/ProjektiFE/browser/traces/temp/904fdbaf-fc36-45c7-88bf-d1f26c0c3004"}</msg>
+<msg time="2025-04-06T19:35:10.048840" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/Users/annisaarelma/Opiskelu/Metropolia/Webkehitys/ProjektiFE/browser/traces/temp/6567f127-68c6-46b4-9247-5ce9b603fb27"}</msg>
+<msg time="2025-04-06T19:35:10.076109" level="INFO">Starting Browser process /Users/annisaarelma/Opiskelu/Metropolia/Webkehitys/ProjektiFE/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js using port 60018</msg>
+<msg time="2025-04-06T19:35:10.076240" level="INFO">Node startup parameters: ['node', '/Users/annisaarelma/Opiskelu/Metropolia/Webkehitys/ProjektiFE/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js', '60018']</msg>
+<msg time="2025-04-06T19:35:12.034909" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/Users/annisaarelma/Opiskelu/Metropolia/Webkehitys/ProjektiFE/browser/traces/temp/6567f127-68c6-46b4-9247-5ce9b603fb27"}</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-04-06T17:37:14.950713" elapsed="2.397583"/>
+<status status="PASS" start="2025-04-06T19:35:10.048100" elapsed="1.987013"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-04-06T17:37:18.610417" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173/src/pages/Kirjaudu.html</msg>
-<msg time="2025-04-06T17:37:18.610598" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2025-04-06T19:35:12.741416" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173/src/pages/Kirjaudu.html</msg>
+<msg time="2025-04-06T19:35:12.742046" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>http://localhost:5173/src/pages/Kirjaudu.html</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-04-06T17:37:17.348883" elapsed="1.262001"/>
+<status status="PASS" start="2025-04-06T19:35:12.035407" elapsed="0.707197"/>
 </kw>
 <kw name="Get Title" owner="Browser">
-<msg time="2025-04-06T17:37:18.637913" level="INFO">Title: 'Kirjautuminen'</msg>
+<msg time="2025-04-06T19:35:12.766968" level="INFO">Title: 'Kirjautuminen'</msg>
 <arg>==</arg>
 <arg>Kirjautuminen</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-04-06T17:37:18.611686" elapsed="0.026354"/>
-</kw>
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-04-06T17:37:18.638845" level="INFO">${USERNAME} = ansku</msg>
-<var>${USERNAME}</var>
-<arg>USERNAME</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-04-06T17:37:18.638421" elapsed="0.000463"/>
-</kw>
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-04-06T17:37:18.639233" level="INFO">${PASSWORD} = anskubansku</msg>
-<var>${PASSWORD}</var>
-<arg>PASSWORD</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-04-06T17:37:18.639044" elapsed="0.000217"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-04-06T17:37:18.639552" level="INFO">USERNAME: ansku</msg>
-<arg>USERNAME: ${USERNAME}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-04-06T17:37:18.639417" elapsed="0.000155"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-04-06T17:37:18.639734" level="INFO">PASSWORD:</msg>
-<arg>PASSWORD:</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-04-06T17:37:18.639683" elapsed="0.000067"/>
+<status status="PASS" start="2025-04-06T19:35:12.743300" elapsed="0.023766"/>
 </kw>
 <kw name="Type Text" owner="Browser">
-<msg time="2025-04-06T17:37:18.640207" level="INFO">Types the text 'ansku' in the given field.</msg>
+<msg time="2025-04-06T19:35:12.767672" level="INFO">Types the text '***' in the given field.</msg>
 <arg>css=.loginForm input[type="text"]</arg>
 <arg>${Username}</arg>
-<arg>delay=0.1 s</arg>
+<arg>delay=0.1s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-04-06T17:37:18.639883" elapsed="0.536399"/>
+<status status="PASS" start="2025-04-06T19:35:12.767256" elapsed="0.596425"/>
 </kw>
 <kw name="Type Secret" owner="Browser">
 <arg>css=.loginForm input[type="password"]</arg>
 <arg>$Password</arg>
-<arg>delay=0.1 s</arg>
+<arg>delay=0.1s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given secret from ``variable_name`` into the text field
 found by ``selector``.</doc>
-<status status="PASS" start="2025-04-06T17:37:19.176448" elapsed="1.141239"/>
+<status status="PASS" start="2025-04-06T19:35:13.364246" elapsed="1.163467"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2025-04-06T17:37:20.319941" level="INFO">Clicks the element 'css=.loginForm button'.</msg>
+<msg time="2025-04-06T19:35:14.529791" level="INFO">Clicks the element 'css=.loginForm button'.</msg>
 <arg>css=.loginForm button</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-04-06T17:37:20.318670" elapsed="0.092185"/>
+<status status="PASS" start="2025-04-06T19:35:14.528627" elapsed="0.041674"/>
 </kw>
-<msg time="2025-04-06T17:37:20.413481" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-06T17:37:14.950295" elapsed="5.460978"/>
+<msg time="2025-04-06T19:35:14.572457" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-06T19:35:10.046246" elapsed="4.524333"/>
 </test>
-<status status="PASS" start="2025-04-06T17:37:14.841733" elapsed="5.572330"/>
+<status status="PASS" start="2025-04-06T19:35:07.696047" elapsed="6.877020"/>
 </suite>
 <statistics>
 <total>
@@ -99,19 +73,9 @@ found by ``selector``.</doc>
 <tag>
 </tag>
 <suite>
-<stat name="Teht5" id="s1" pass="1" fail="0" skip="0">Teht5</stat>
+<stat name="Teht6" id="s1" pass="1" fail="0" skip="0">Teht6</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-04-06T17:37:14.946615" level="ERROR">Error in file '/Users/annisaarelma/Opiskelu/Metropolia/Webkehitys/ProjektiFE/tests/teht5.robot' on line 5: Importing library 'DotenvLibrary' failed: ModuleNotFoundError: No module named 'DotenvLibrary'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  /Users/annisaarelma/Opiskelu/Metropolia/Webkehitys/ProjektiFE/.venv/bin
-  /Library/Frameworks/Python.framework/Versions/3.13/lib/python313.zip
-  /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13
-  /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/lib-dynload
-  /Users/annisaarelma/Opiskelu/Metropolia/Webkehitys/ProjektiFE/.venv/lib/python3.13/site-packages</msg>
-<msg time="2025-04-06T17:37:14.949590" level="WARN">python-dotenv could not parse statement starting at line 1</msg>
 </errors>
 </robot>

@@ -136,6 +136,7 @@ requests: 2.32.3
 CryptoLibrary: 0.4.2
 ````
 
+__________
 
 ## Tehtävä 2.
 
@@ -158,6 +159,8 @@ Test MyHealth
     Type Secret  css=.loginForm input[type="password"]    $Password   delay=0.1 s
     Click    css=.loginForm button
 ````
+__________
+
  2. Keywords.robot- tiedostoon lisäsin testikäyttäjätunnukset:
 
  ````
@@ -185,6 +188,8 @@ Tässä tehtävässä oli tarkoitus tehdä kirjautumistesti omalle Myhealth-sove
 USERNAME=Oma käyttäjänimi tähän 
 PASSWORD=Oma salasana tähän 
 ````
+__________
+
 2. Määritellään muuttujat load_env.py tiedostoon:
 
 ````
@@ -196,6 +201,8 @@ print(os.getenv("USERNAME"))
 print(os.getenv("PASSWORD"))
 
 ````
+__________
+
 3. Tehdään kirjautumistesti:
 
 ````
@@ -225,6 +232,42 @@ Login to MyHealth using env
     Click    css=.loginForm button
 
 ````
-Onnistunut lopputulos terminalissa:
+__________
+
+**Onnistunut lopputulos terminalissa:**
+
 ![Testikirjautuminen](public/img/Teht5.png)
-**Onnistunut testikirjautuminen**
+
+
+## Tehtävä 6
+
+Tässä tehtävässä oli tarkoitus tehdä kirjautumistesti käyttäen Cryptolibrarya.
+
+1. Teht6.robot tiedoston koodi:
+````
+*** Settings ***
+Library     Browser      auto_closing_level=SUITE
+Library     CryptoLibrary     variable_decryption=True
+
+*** Variables ***
+${Username}    crypt:ZKqJyjDiGorvMd/rrQzYVco5ocTU028EwoPWoznt7FoQR2xt9b/4AlhPB+4QxhMw71CMfOQ=
+${Password}    crypt:Pv/puBot7UQHGVh8uMocgg1nx783P3NDrGsAn2GR5WvWofFqx/t26mThwj39Q1mTVuy7la7S/VpLerM=
+
+*** Test Cases ***
+Login to MyHealth with CryptoLibrary
+
+    New Browser     chromium    headless=No
+    New Page        http://localhost:5173/src/pages/Kirjaudu.html
+    Get Title       ==    Kirjautuminen
+
+    Type Text       css=.loginForm input[type="text"]        ${Username}    delay=0.1s
+    Type Secret     css=.loginForm input[type="password"]    $Password   delay=0.1s
+    Click           css=.loginForm button
+  ````
+__________
+
+**Onnistunut lopputulos terminaalissa:**
+
+![Testikirjautuminen](public/img/Teht6.png)
+
+

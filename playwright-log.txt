@@ -1,23 +1,38 @@
-{"level":30,"time":"2025-04-06T14:37:15.344Z","pid":4182,"hostname":"Mac.home","msg":"Listening on 57827"}
-(node:4182) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+{"level":30,"time":"2025-04-06T16:35:10.352Z","pid":6662,"hostname":"Mac.home","msg":"Listening on 60018"}
+(node:6662) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-{"level":30,"time":"2025-04-06T14:37:16.454Z","pid":4182,"hostname":"Mac.home","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2025-04-06T14:37:17.345Z","pid":4182,"hostname":"Mac.home","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
-{"level":30,"time":"2025-04-06T14:37:17.346Z","pid":4182,"hostname":"Mac.home","msg":"End of node method newBrowser"}
-{"level":30,"time":"2025-04-06T14:37:17.346Z","pid":4182,"hostname":"Mac.home","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2025-04-06T14:37:17.350Z","pid":4182,"hostname":"Mac.home","msg":"Start of node method newPage"}
-{"level":30,"time":"2025-04-06T14:37:17.350Z","pid":4182,"hostname":"Mac.home","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2025-04-06T14:37:17.375Z","pid":4182,"hostname":"Mac.home","msg":"Changed active context"}
-{"level":30,"time":"2025-04-06T14:37:18.464Z","pid":4182,"hostname":"Mac.home","msg":"Video path: undefined"}
-{"level":30,"time":"2025-04-06T14:37:18.464Z","pid":4182,"hostname":"Mac.home","msg":"Changed active page"}
-{"level":30,"time":"2025-04-06T14:37:18.608Z","pid":4182,"hostname":"Mac.home","msg":"End of node method newPage"}
-{"level":30,"time":"2025-04-06T14:37:18.641Z","pid":4182,"hostname":"Mac.home","msg":"Start of node method typeText"}
-{"level":30,"time":"2025-04-06T14:37:18.641Z","pid":4182,"hostname":"Mac.home","msg":"Strict mode is enabled, find Locator with css=.loginForm input[type=\"text\"] in page."}
-{"level":30,"time":"2025-04-06T14:37:19.175Z","pid":4182,"hostname":"Mac.home","msg":"End of node method typeText"}
-{"level":30,"time":"2025-04-06T14:37:19.177Z","pid":4182,"hostname":"Mac.home","msg":"Start of node method typeText"}
-{"level":30,"time":"2025-04-06T14:37:19.177Z","pid":4182,"hostname":"Mac.home","msg":"Strict mode is enabled, find Locator with css=.loginForm input[type=\"password\"] in page."}
-{"level":30,"time":"2025-04-06T14:37:20.315Z","pid":4182,"hostname":"Mac.home","msg":"End of node method typeText"}
-{"level":30,"time":"2025-04-06T14:37:20.323Z","pid":4182,"hostname":"Mac.home","msg":"Start of node method click"}
-{"level":30,"time":"2025-04-06T14:37:20.324Z","pid":4182,"hostname":"Mac.home","msg":"Strict mode is enabled, find Locator with css=.loginForm button in page."}
-{"level":30,"time":"2025-04-06T14:37:20.409Z","pid":4182,"hostname":"Mac.home","msg":"End of node method click"}
-{"level":30,"time":"2025-04-06T14:43:32.770Z","pid":4182,"hostname":"Mac.home","msg":"Removed page=1b463064-2d1d-475a-a6d5-73d6645b2b9b from context=33f17488-81e9-468b-99bb-581d1d8d98aa page stack"}
+{"level":30,"time":"2025-04-06T16:35:11.415Z","pid":6662,"hostname":"Mac.home","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-04-06T16:35:12.034Z","pid":6662,"hostname":"Mac.home","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-04-06T16:35:12.034Z","pid":6662,"hostname":"Mac.home","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-04-06T16:35:12.034Z","pid":6662,"hostname":"Mac.home","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-04-06T16:35:12.036Z","pid":6662,"hostname":"Mac.home","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-04-06T16:35:12.036Z","pid":6662,"hostname":"Mac.home","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-04-06T16:35:12.062Z","pid":6662,"hostname":"Mac.home","msg":"Changed active context"}
+{"level":30,"time":"2025-04-06T16:35:12.421Z","pid":6662,"hostname":"Mac.home","msg":"Video path: undefined"}
+{"level":30,"time":"2025-04-06T16:35:12.421Z","pid":6662,"hostname":"Mac.home","msg":"Changed active page"}
+{"level":30,"time":"2025-04-06T16:35:12.739Z","pid":6662,"hostname":"Mac.home","msg":"End of node method newPage"}
+{"level":30,"time":"2025-04-06T16:35:12.768Z","pid":6662,"hostname":"Mac.home","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-04-06T16:35:12.768Z","pid":6662,"hostname":"Mac.home","msg":"Strict mode is enabled, find Locator with css=.loginForm input[type=\"text\"] in page."}
+{"level":30,"time":"2025-04-06T16:35:13.361Z","pid":6662,"hostname":"Mac.home","msg":"End of node method typeText"}
+{"level":30,"time":"2025-04-06T16:35:13.367Z","pid":6662,"hostname":"Mac.home","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-04-06T16:35:13.368Z","pid":6662,"hostname":"Mac.home","msg":"Strict mode is enabled, find Locator with css=.loginForm input[type=\"password\"] in page."}
+{"level":30,"time":"2025-04-06T16:35:14.525Z","pid":6662,"hostname":"Mac.home","msg":"End of node method typeText"}
+{"level":30,"time":"2025-04-06T16:35:14.532Z","pid":6662,"hostname":"Mac.home","msg":"Start of node method click"}
+{"level":30,"time":"2025-04-06T16:35:14.533Z","pid":6662,"hostname":"Mac.home","msg":"Strict mode is enabled, find Locator with css=.loginForm button in page."}
+{"level":30,"time":"2025-04-06T16:35:14.569Z","pid":6662,"hostname":"Mac.home","msg":"End of node method click"}
+{"level":30,"time":"2025-04-06T16:35:14.576Z","pid":6662,"hostname":"Mac.home","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-06T16:35:14.577Z","pid":6662,"hostname":"Mac.home","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-06T16:35:14.578Z","pid":6662,"hostname":"Mac.home","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-06T16:35:14.579Z","pid":6662,"hostname":"Mac.home","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-06T16:35:14.579Z","pid":6662,"hostname":"Mac.home","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-06T16:35:14.580Z","pid":6662,"hostname":"Mac.home","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-06T16:35:14.581Z","pid":6662,"hostname":"Mac.home","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-06T16:35:14.581Z","pid":6662,"hostname":"Mac.home","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-06T16:35:14.582Z","pid":6662,"hostname":"Mac.home","msg":"Changed active context"}
+{"level":30,"time":"2025-04-06T16:35:14.582Z","pid":6662,"hostname":"Mac.home","msg":"Changing current active page: page=935ad63d-5c37-4eaa-9c80-7b48605d34be"}
+{"level":30,"time":"2025-04-06T16:35:14.582Z","pid":6662,"hostname":"Mac.home","msg":"Changed active page"}
+{"level":30,"time":"2025-04-06T16:35:14.587Z","pid":6662,"hostname":"Mac.home","msg":"Start of node method closeContext"}
+{"level":30,"time":"2025-04-06T16:35:14.596Z","pid":6662,"hostname":"Mac.home","msg":"Removed page=92a0da2b-4437-49fc-8e65-fe1e80cf495b from context=f2074355-553b-4b9a-933a-875f4e70c53a page stack"}
+{"level":30,"time":"2025-04-06T16:35:14.610Z","pid":6662,"hostname":"Mac.home","msg":"End of node method closeContext"}
+{"level":30,"time":"2025-04-06T16:35:14.626Z","pid":6662,"hostname":"Mac.home","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-04-06T16:35:14.714Z","pid":6662,"hostname":"Mac.home","msg":"End of node method closeAllBrowsers"}
