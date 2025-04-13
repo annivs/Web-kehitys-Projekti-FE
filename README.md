@@ -270,4 +270,37 @@ __________
 
 ![Testikirjautuminen](public/img/Teht6.png)
 
+## Tehtävä 7
+
+Tässä tehtävässä oli tarkoitus ohjata testien tulokset ja raportit /outputs - nimiseen kansioon.
+Loin outputs- kansion projektiin, johon ohjasin testien raportit ja tulokset käyttäen toimintoa:
+````
+robot --outputdir Outputs tests/valittu testi.robot 
+````
+
+## Tehtävä 8
+
+Tässä tehtävässä oli tarkoitus luoda omalle Github - projektille oma Github.io sivusto, jonka kautta testit (raportit ja tulokset) ovat luettavissa.
+
+1. Ensin loin projektin juureen /docs - kansion.
+__________
+
+2. Seuraavaksi kopioin log.html ja reports.html Outputs- kansioon näillä komennoilla:
+````
+cp Outputs/log.html docs/
+cp Outputs/report.html docs/
+````
+(Tein myös index.html sivun selkeyttääkseni)
+__________
+
+3. Tämän jälkeen siirryin oman Github-repositorini sivulle selaimessa ja suoritin seuraavat vaiheet:
+
+1. Settings --> Pages
+2. Valitsin Source, josta valitsin branchin ja docs kansion:
+![Github.io luominen](public/img/githubio.png)
+3. Lopuksi painoin **Save**.
+
+__________
+
+4. Lopulta sain oman github.io linkin "https://annivs.github.io/Web-kehitys-Projekti-FE/"
 
