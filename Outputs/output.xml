@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on darwin)" generated="2025-04-13T13:05:23.151171" rpa="false" schemaversion="5">
+<suite id="s1" name="Teht6" source="/Users/annisaarelma/Opiskelu/Metropolia/Webkehitys/ProjektiFE/Tests/teht6.robot">
+<test id="s1-t1" name="Login to MyHealth with CryptoLibrary" line="10">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-04-13T13:05:25.577759" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/Users/annisaarelma/Opiskelu/Metropolia/Webkehitys/ProjektiFE/outputs/browser/traces/temp/784ff89e-746f-4a48-939b-042c3b8d122a"}</msg>
+<msg time="2025-04-13T13:05:25.616525" level="INFO">Starting Browser process /Users/annisaarelma/Opiskelu/Metropolia/Webkehitys/ProjektiFE/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js using port 52640</msg>
+<msg time="2025-04-13T13:05:25.616664" level="INFO">Node startup parameters: ['node', '/Users/annisaarelma/Opiskelu/Metropolia/Webkehitys/ProjektiFE/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js', '52640']</msg>
+<msg time="2025-04-13T13:05:27.275973" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/Users/annisaarelma/Opiskelu/Metropolia/Webkehitys/ProjektiFE/outputs/browser/traces/temp/784ff89e-746f-4a48-939b-042c3b8d122a"}</msg>
+<arg>chromium</arg>
+<arg>headless=No</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-04-13T13:05:25.577296" elapsed="1.698906"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-04-13T13:05:27.766607" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173/src/pages/Kirjaudu.html</msg>
+<msg time="2025-04-13T13:05:27.766854" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>http://localhost:5173/src/pages/Kirjaudu.html</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-04-13T13:05:27.276810" elapsed="0.490311"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2025-04-13T13:05:27.775796" level="INFO">Title: 'Kirjautuminen'</msg>
+<arg>==</arg>
+<arg>Kirjautuminen</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-04-13T13:05:27.767447" elapsed="0.008668"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-04-13T13:05:27.777707" level="INFO">Types the text '***' in the given field.</msg>
+<arg>css=.loginForm input[type="text"]</arg>
+<arg>${Username}</arg>
+<arg>delay=0.1s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-04-13T13:05:27.776503" elapsed="0.536072"/>
+</kw>
+<kw name="Type Secret" owner="Browser">
+<arg>css=.loginForm input[type="password"]</arg>
+<arg>$Password</arg>
+<arg>delay=0.1s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given secret from ``variable_name`` into the text field
+found by ``selector``.</doc>
+<status status="PASS" start="2025-04-13T13:05:28.313195" elapsed="1.165782"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-04-13T13:05:29.480872" level="INFO">Clicks the element 'css=.loginForm button'.</msg>
+<arg>css=.loginForm button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-13T13:05:29.479737" elapsed="0.031648"/>
+</kw>
+<msg time="2025-04-13T13:05:29.514628" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-13T13:05:25.576027" elapsed="3.935931"/>
+</test>
+<status status="PASS" start="2025-04-13T13:05:23.151637" elapsed="6.363550"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Teht6" id="s1" pass="1" fail="0" skip="0">Teht6</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
