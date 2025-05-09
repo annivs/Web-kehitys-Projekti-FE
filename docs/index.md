@@ -4,7 +4,7 @@ layout: default
 ---
 # Ohjelmistotestaus
 
-## Yksilötehtävät
+# Yksilötehtävät
 
 - [Tehtävä 1: Robot Frameworkin asennus](https://github.com/annivs/Web-kehitys-Projekti-FE/tree/Ohjelmistotestaus?tab=readme-ov-file#tehtävä-1)
 - [Tehtävä 2: Kirjautumisesimerkki](https://github.com/annivs/Web-kehitys-Projekti-FE/tree/Ohjelmistotestaus?tab=readme-ov-file#tehtävä-2)
