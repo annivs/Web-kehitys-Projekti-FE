@@ -290,7 +290,7 @@ __________
 cp Outputs/log.html docs/
 cp Outputs/report.html docs/
 ````
-(Tein myös index.html sivun selkeyttääkseni)
+Tein myös index.md sivun
 __________
 
 3. Tämän jälkeen siirryin oman Github-repositorini sivulle selaimessa ja suoritin seuraavat vaiheet:
