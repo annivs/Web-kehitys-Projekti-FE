@@ -1,3 +1,7 @@
+---
+title: Ohjelmistotestaus
+layout: default
+---
 # Ohjelmistotestaus
 
 ## Yksilötehtävät
