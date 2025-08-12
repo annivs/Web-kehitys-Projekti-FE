@@ -1,4 +1,4 @@
-# 📖 MyHealth frontend
+#  MyHealth frontend
 
 ## Yleiskuvaus sovelluksesta
 
